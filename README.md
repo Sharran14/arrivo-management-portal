@@ -27,4 +27,28 @@ The project is a web application that manages posts, categories, and users. The 
 ### Steps:
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-repository-url](https://github.com/Sharran14/arrivo-management-portal.git)
+   git clone https://github.com/Sharran14/arrivo-management-portal.git
+2. Navigate to the project directory:
+   ```bash
+   cd arrivo-web-app
+3. Install dependencies:
+   ```bash
+   flutter pub get
+4. Run the application:
+   ```bash
+   flutter run
+
+## Usage
+
+The web application allows users to:
+- View list of blog posts (API integration with jsonplaceholder)
+- Search and Change Entries of the Displayed Data
+
+## API Integration
+
+The frontend interacts with APIs for fetching blog posts and categories using the provided routes from [jsonplaceholder](https://jsonplaceholder.typicode.com/).
+
+## Screenshot
+
+Here’s a screenshot of the designed UI based on the provided template:
+![UI Screenshot](screenshots/screenshot.png)
