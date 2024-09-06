@@ -1,16 +1,54 @@
-# arrivo_management_portal
+# Arrivo Technical Test - Web Application (Frontend)
 
-A new Flutter project.
+This repository contains the frontend portion of the Arrivo Technical Test, specifically focused on building a management portal using Flutter for a blog post management system.
 
-## Getting Started
+## Project Overview
 
-This project is a starting point for a Flutter application.
+The project is a web application that manages posts, categories, and users. The frontend is developed in Flutter using the flutter_bloc state management and adheres to Material Design principles.
 
-A few resources to get you started if this is your first Flutter project:
+### Key Features:
+- **Blog Post List**: Displays a list of blog posts using the provided design template.
+- **API Integration**: Integrated with a sample API from [jsonplaceholder](https://jsonplaceholder.typicode.com/) for blog posts and categories.
+- **State Management**: Implemented using flutter_bloc to manage UI states.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Frontend Framework**: Flutter
+- **State Management**: flutter_bloc
+- **UI Design**: Material Design
+- **Design Pattern**: Domain Driven Design (DDD)
+
+## Setup and Installation
+
+### Prerequisites:
+- Flutter SDK: [Flutter installation guide](https://flutter.dev/docs/get-started/install)
+- A code editor like Visual Studio Code or Android Studio
+
+### Steps:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Sharran14/arrivo-management-portal.git
+2. Navigate to the project directory:
+   ```bash
+   cd arrivo-web-app
+3. Install dependencies:
+   ```bash
+   flutter pub get
+4. Run the application:
+   ```bash
+   flutter run
+
+## Usage
+
+The web application allows users to:
+- View list of blog posts (API integration with jsonplaceholder)
+- Search and Change Entries of the Displayed Data
+
+## API Integration
+
+The frontend interacts with APIs for fetching blog posts and categories using the provided routes from [jsonplaceholder](https://jsonplaceholder.typicode.com/).
+
+## Screenshot
+
+Here’s a screenshot of the designed UI based on the provided template:
+![UI Screenshot](screenshots/screenshot.png)
