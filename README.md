@@ -50,5 +50,9 @@ The frontend interacts with APIs for fetching blog posts and categories using th
 
 ## Screenshot
 
-Here’s a screenshot of the designed UI based on the provided template:
-![UI Screenshot](screenshots/screenshot.png)
+Here’s a screenshots of the designed UI based on the provided template:
+
+<img style="align-content: center;" alt="Demo" src="assets/Screenshot1.png">
+<img style="align-content: center;" alt="Demo" src="assets/Screenshot2.png">
+<img style="align-content: center;" alt="Demo" src="assets/Screenshot3.png">
+<img style="align-content: center;" alt="Demo" src="assets/Screenshot4.png">
