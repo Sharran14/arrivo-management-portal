@@ -60,5 +60,6 @@ Here’s a screenshots of the designed UI based on the provided template:
 ## Screen Recording 
 
 Here’s a screen recording:
+The web application is Scrollable (Vertically & Horizontally)
 
 <img style="align-content: center;" alt="Demo" src="assets/Recording.gif">
