@@ -18,7 +18,7 @@ class _PostListScreenState extends State<PostListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200], // Set your background color here
+      backgroundColor: Colors.grey[200], // Set background color here
       body: Padding(
         padding: const EdgeInsets.all(16.0), // Padding around the white layer
         child: Container(
@@ -187,7 +187,7 @@ class _PostListScreenState extends State<PostListScreen> {
                                   ],
                                   rows: displayedPosts.map((post) {
                                     return DataRow(
-                                      color: MaterialStateProperty.all<Color>(Colors.white), // White background for rows
+                                      color: WidgetStateProperty.all<Color>(Colors.white), // White background for rows
                                       cells: [
                                         DataCell(
                                           Padding(
