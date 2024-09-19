@@ -53,9 +53,6 @@ The frontend interacts with APIs for fetching blog posts and categories using th
 Here’s a screenshots of the designed UI based on the provided template:
 
 <img style="align-content: center;" alt="Demo" src="assets/Screenshot1.png">
-<img style="align-content: center;" alt="Demo" src="assets/Screenshot2.png">
-<img style="align-content: center;" alt="Demo" src="assets/Screenshot3.png">
-<img style="align-content: center;" alt="Demo" src="assets/Screenshot4.png">
 
 ## Screen Recording 
 
@@ -63,3 +60,20 @@ Here’s a screen recording:
 The web application is Scrollable (Vertically & Horizontally)
 
 <img style="align-content: center;" alt="Demo" src="assets/Recording.gif">
+
+
+# Interview Task
+ A segment of code is added in the previous assignment.
+
+ ## Custom Circular Slider
+
+This task includes the development of a custom circular slider in Flutter designed to function as a volume dial. This component allows users to:
+
+- **Drag the Knob**: Adjust the value from 0 to 100 by dragging the knob around the circle.
+- **Dynamic Value Display**: See the current value dynamically as they interact with the slider.
+- **Smooth Animations**: Experience smooth animations while adjusting the value.
+
+### Screen Recording
+
+Here is the screen recording of the output for this task: 
+<img style="align-content: center;" alt="Demo" src="assets/Recording2.gif">
