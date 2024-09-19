@@ -72,3 +72,8 @@ This task includes the development of a custom circular slider in Flutter design
 - **Drag the Knob**: Adjust the value from 0 to 100 by dragging the knob around the circle.
 - **Dynamic Value Display**: See the current value dynamically as they interact with the slider.
 - **Smooth Animations**: Experience smooth animations while adjusting the value.
+
+### Screen Recording
+
+Here is the screen recording of the output for this task: 
+<img style="align-content: center;" alt="Demo" src="assets/Recording2.gif">
