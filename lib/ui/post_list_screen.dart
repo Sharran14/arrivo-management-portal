@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, library_private_types_in_public_api
+
+import 'package:arrivo_management_portal/ui/circular_volume.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../blocs/post_bloc.dart';
@@ -82,7 +85,7 @@ class _PostListScreenState extends State<PostListScreen> {
                       ],
                     ),
                     // Search box
-                    Container(
+                    SizedBox(
                       width: 250, // Adjust width to make the search box smaller
                       child: TextField(
                         controller: _searchController,
@@ -187,7 +190,7 @@ class _PostListScreenState extends State<PostListScreen> {
                                   ],
                                   rows: displayedPosts.map((post) {
                                     return DataRow(
-                                      color: WidgetStateProperty.all<Color>(Colors.white), // White background for rows
+                                      color: WidgetStateProperty.all<Color>(const Color.fromARGB(255, 255, 255, 255)), // White background for rows
                                       cells: [
                                         DataCell(
                                           Padding(
@@ -244,58 +247,74 @@ class _PostListScreenState extends State<PostListScreen> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Align(
-                              alignment: Alignment.bottomRight, // Aligns pagination to the bottom right
+                              alignment: Alignment.bottomCenter, // Aligns both slider and pagination to bottom
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end, // Aligns row contents to the end (right)
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween, // Slider left, Pagination right
                                 children: [
-                                  IconButton(
-                                    icon: Icon(Icons.arrow_back_ios),
-                                    onPressed: _currentPage > 1
-                                        ? () {
-                                            setState(() {
-                                              _currentPage--;
-                                            });
-                                          }
-                                        : null,
+                                  SizedBox(
+                                    width: 150,
+                                    height: 150,
+                                    child: CircularSlider(
+                                      size: 100,  // Smaller size to fit in the row
+                                      knobColor: Colors.purple,
+                                      trackColor: Colors.grey.shade300,
+                                      progressColor: Colors.purple,
+                                    ),
                                   ),
-                                  for (int i = 1; i <= (filteredPosts.length / _rowsPerPage).ceil(); i++) ...[
-                                    if (i == 1 || i == (filteredPosts.length / _rowsPerPage).ceil() || (i >= _currentPage - 1 && i <= _currentPage + 1))
-                                      GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            _currentPage = i;
-                                          });
-                                        },
-                                        child: Container(
-                                          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                                          margin: EdgeInsets.symmetric(horizontal: 4),
-                                          decoration: BoxDecoration(
-                                            color: _currentPage == i ? Colors.purple : Colors.grey[300],
-                                            borderRadius: BorderRadius.circular(12),
-                                          ),
-                                          child: Text(
-                                            '$i',
-                                            style: TextStyle(
-                                              color: _currentPage == i ? Colors.white : Colors.black,
+                                  // Pagination controls (Bottom Right)
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      IconButton(
+                                        icon: Icon(Icons.arrow_back_ios),
+                                        onPressed: _currentPage > 1
+                                            ? () {
+                                                setState(() {
+                                                  _currentPage--;
+                                                });
+                                              }
+                                            : null,
+                                      ),
+                                      for (int i = 1; i <= (filteredPosts.length / _rowsPerPage).ceil(); i++) ...[
+                                        if (i == 1 || i == (filteredPosts.length / _rowsPerPage).ceil() || (i >= _currentPage - 1 && i <= _currentPage + 1))
+                                          GestureDetector(
+                                            onTap: () {
+                                              setState(() {
+                                                _currentPage = i;
+                                              });
+                                            },
+                                            child: Container(
+                                              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                                              margin: EdgeInsets.symmetric(horizontal: 4),
+                                              decoration: BoxDecoration(
+                                                color: _currentPage == i ? Colors.purple : Colors.grey[300],
+                                                borderRadius: BorderRadius.circular(12),
+                                              ),
+                                              child: Text(
+                                                '$i',
+                                                style: TextStyle(
+                                                  color: _currentPage == i ? Colors.white : Colors.black,
+                                                ),
+                                              ),
                                             ),
                                           ),
-                                        ),
+                                        if (i == _currentPage - 2 || i == _currentPage + 2)
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                                            child: Text("..."),
+                                          ),
+                                      ],
+                                      IconButton(
+                                        icon: Icon(Icons.arrow_forward_ios),
+                                        onPressed: _currentPage < (filteredPosts.length / _rowsPerPage).ceil()
+                                            ? () {
+                                                setState(() {
+                                                  _currentPage++;
+                                                });
+                                              }
+                                            : null,
                                       ),
-                                    if (i == _currentPage - 2 || i == _currentPage + 2)
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                                        child: Text("..."),
-                                      ),
-                                  ],
-                                  IconButton(
-                                    icon: Icon(Icons.arrow_forward_ios),
-                                    onPressed: _currentPage < (filteredPosts.length / _rowsPerPage).ceil()
-                                        ? () {
-                                            setState(() {
-                                              _currentPage++;
-                                            });
-                                          }
-                                        : null,
+                                    ],
                                   ),
                                 ],
                               ),

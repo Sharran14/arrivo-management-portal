@@ -15,3 +15,5 @@ class Post {
     );
   }
 }
+
+//blueprint for the fetched data from API and displayed. 
