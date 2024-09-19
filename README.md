@@ -73,7 +73,8 @@ This task includes the development of a custom circular slider in Flutter design
 - **Dynamic Value Display**: See the current value dynamically as they interact with the slider.
 - **Smooth Animations**: Experience smooth animations while adjusting the value.
 
-### Screen Recording
+## Screen Recording
 
 Here is the screen recording of the output for this task: 
+
 <img style="align-content: center;" alt="Demo" src="assets/Recording2.gif">
