@@ -56,3 +56,10 @@ Here’s a screenshots of the designed UI based on the provided template:
 <img style="align-content: center;" alt="Demo" src="assets/Screenshot2.png">
 <img style="align-content: center;" alt="Demo" src="assets/Screenshot3.png">
 <img style="align-content: center;" alt="Demo" src="assets/Screenshot4.png">
+
+## Screen Recording 
+
+Here’s a screen recording:
+The web application is Scrollable (Vertically & Horizontally)
+
+<img style="align-content: center;" alt="Demo" src="assets/Recording.gif">
